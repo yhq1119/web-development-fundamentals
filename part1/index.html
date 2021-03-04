@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        This is a paragraph
+    </p>
+
+    <p>
+        No id nor class paragraph
+    </p>
+
+    <p id="p1">
+        Haha another paragraph
+    </p>
+
+    <p class="pclass">
+        class paragraph
+    </p>
+
+    <p id="p2" class="pclass">
+        class paragraph
+    </p>
+
+    <h1 class="pclass">
+        class Header One
+    </h1>
+    <div>
+        This is inside a div
+    </div>
+
+
+    <script>
+        // select element / search
+        const elem_p1 = document.getElementById("p1");
+        const elem_p1_ = document.querySelector("#p1");
+        const elem_pclass = document.querySelector(".pclass");
+        const elems_pclass = document.querySelectorAll(".pclass");
+
+        // manipulate element
+
+        // create an element
+
+        const newElem = document.createElement("a");
+        const newElem2 = document.createElement("a");
+
+        // insert to somewhere
+
+        document.body.append(newElem);
+        document.body.append(newElem2);
+
+
+        newElem.innerText = "<div>This is my link</div>";
+        newElem2.innerHTML = "<div>This is my link</div>";
+        
+        // remove the element
+        newElem2.innerHTML = "";
+        document.body.removeChild(newElem2);
+
+    </script>
+    <style>
+        /* body > p {
+            background-color: coral;
+        } */
+        p {
+            background-color: red;
+        }
+
+        p {
+            background-color: blue;
+        }
+
+
+
+        #p1 {
+            background-color: blueviolet;
+        }
+
+        #p2 {
+            background-color: gold;
+            border: 5px solid black;
+        }
+
+        .pclass {
+            background-color: aqua;
+        }
+    </style>
+</body>
+
+</html>
